@@ -12,6 +12,9 @@ const Nav = (props) => {
           <a className={`nav-link ${!active && 'active'}`} onClick={() => { props.onNavigationChange('CART') }} href="#">Cart</a>
         </li>
       </ul>
+      <div className="selected-items"> 
+        <span  className="badge badge-pill badge-info">Selected: {props.selectedItems}</span>
+      </div>
     </div>
   );
 };

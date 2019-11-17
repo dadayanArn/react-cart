@@ -23,6 +23,13 @@ const Products = (props) => {
   return (
     <div className="container">
       <div className="products">
+        {state.loading && (
+          <div className="text-center">
+            <div className="spinner-border text-warning" role="status">
+              <span className="sr-only">Loading...</span>
+            </div>
+          </div>
+        )}
         {data.map((item) => {
           return (
             <Card key={item.id} data={item} addToCart={props.addToCart}/>

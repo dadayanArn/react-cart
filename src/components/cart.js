@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { urlItems } from '../endpoints'
+import React from 'react';
 
 const Cart = (props) => {
   const { items, removeItem } = props;

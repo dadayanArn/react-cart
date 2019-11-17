@@ -18,7 +18,6 @@ class Shop extends Component {
     const newItems = selectedItems.filter((item) => {
       return item.id !== removeItem.id
     })
-    console.log("#AR: Shop -> removeFromCart -> newItems", newItems);
     this.setState((prevState) => ({
       selectedItems: newItems
     }))
@@ -39,7 +38,7 @@ class Shop extends Component {
     const { tab, selectedItems } = this.state;
     return (
       <div>
-        <Nav onNavigationChange={this.navigationChange} tab={tab}/>
+        <Nav onNavigationChange={this.navigationChange} tab={tab} selectedItems={selectedItems.length}/>
         {tab === 'PRODUCT' && <Products addToCart={this.addToCart}/>}
         {tab === 'CART' && <Cart items={selectedItems} removeItem={this.removeFromCart} />}
       </div>
